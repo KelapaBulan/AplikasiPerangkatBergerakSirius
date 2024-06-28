@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "14033899360",
+    "firebase_url": "https://test-5184a-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "test-5184a",
+    "storage_bucket": "test-5184a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:14033899360:android:245494572f8b91aa075805",
+        "android_client_info": {
+          "package_name": "com.example.tabview_flutter_module"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxw9QW3ne4VkwflnoeWbPyuYwZZNXMBo4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
