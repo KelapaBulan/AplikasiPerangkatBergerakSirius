@@ -4,9 +4,6 @@ import 'globals.dart' as globals;
 
 
 
-
-
-
 class FirstScreen extends StatefulWidget {
   final TabController tabController;
   const FirstScreen({Key? key, required this.tabController}) : super(key: key);
@@ -20,7 +17,7 @@ class _FirstScreenPage extends State<FirstScreen> with SingleTickerProviderState
 
   @override
   void initState() {
-    tabController = TabController(length: 4, initialIndex: 0, vsync: this);
+    tabController = TabController(length: 2, initialIndex: 0, vsync: this);
     tabController.addListener(() {
       setState(() {});
     });
@@ -49,8 +46,10 @@ class _FirstScreenPage extends State<FirstScreen> with SingleTickerProviderState
     var yawar = int.parse(myController2.text);
     if (myController1.text == "Motor" || myController1.text == "motor"){
         yawar = yawar * 3000;
-    } else if(myController1 == "Mobil" || myController1.text == "mobil"){
+    } else if(myController1.text == "Mobil" || myController1.text == "mobil"){
       yawar = yawar * 5000;
+    } else {
+      yawar = yawar * 7000;
     }
     
     setState(() {
@@ -58,12 +57,13 @@ class _FirstScreenPage extends State<FirstScreen> with SingleTickerProviderState
       globals.globalText1 = myController1.text;
       globals.globalText2 = myController2.text;
       globals.globalInt = '$yawar';
-      globals.growableList.insert(globalint2, "User = " + globals.globalText + " Pass = " + globals.globalText1 + 
-      " Hour = " + myController2.text + " Price = " + '$yawar');
+      globals.growableList.insert(globalint2, "User = " + globals.globalText + " Jenis Kendaraan = " + globals.globalText1 + 
+      " jam Parkir = " + myController2.text + " Price = " + '$yawar');
     });
     print(globals.globalText);
-    globalint2--;
+    globalint2++;
     widget.tabController.animateTo(1);
+    print(globals.growableList.map((quote) => Text(quote)).toList());
   }
 
   @override
@@ -79,7 +79,7 @@ class _FirstScreenPage extends State<FirstScreen> with SingleTickerProviderState
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text("test"),
+        title: Text("Input Here"),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it

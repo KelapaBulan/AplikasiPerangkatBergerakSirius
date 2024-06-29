@@ -41,7 +41,7 @@ class SecondScreen extends StatefulWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text("test"),
+        title: Text("Output"),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -66,7 +66,7 @@ class SecondScreen extends StatefulWidget {
  Container(
   color: Colors.green,
  width: 400,
- height: 300,
+ height: 450,
  margin: const EdgeInsets.all(40.0),
  child: Column(
   mainAxisSize: MainAxisSize.min,
